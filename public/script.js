@@ -25,8 +25,8 @@ if (savedTheme === 'dark-theme' || savedTheme === 'light-theme') {
   body.classList.add(savedTheme);
   iconSpan.innerHTML = savedTheme === 'dark-theme' ? moonSVG : sunSVG;
 } else {
-  body.classList.add('light-theme');
-  iconSpan.innerHTML = sunSVG;
+  body.classList.add('dark-theme');
+  iconSpan.innerHTML = moonSVG;
 }
 
 const observer = new IntersectionObserver(
