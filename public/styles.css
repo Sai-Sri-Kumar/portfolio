@@ -903,21 +903,40 @@ code, pre {
 @media (max-width: 1024px) {
   .project-section {
     padding: 4rem 1.5rem;
+    max-width: 100%;
   }
 
   #projectcard, #projectcardright {
     width: 100%;
     left: 0;
     padding: 1.5rem;
+    gap: 2rem;
   }
 
   #projectcard.show, #projectcardright.show {
     left: 0;
   }
 
+  .project-content {
+    max-width: 100%;
+  }
+
+  .project-content h3 {
+    font-size: 2rem;
+    white-space: normal;
+  }
+
+  .project-content p {
+    font-size: 1rem;
+  }
+
   .project-image {
     min-width: 100%;
     height: 280px;
+  }
+
+  .project-tags {
+    justify-content: flex-start;
   }
 }
 
@@ -927,38 +946,99 @@ code, pre {
   }
 
   #projectcard, #projectcardright {
+    flex-direction: column;
     padding: 1.2rem;
+    gap: 1.5rem;
+  }
+
+  .project-content {
+    order: 2;
+  }
+
+  .project-image {
+    order: 1;
+    height: 220px;
   }
 
   .project-content h3 {
     font-size: 1.8rem;
+    text-align: center;
   }
 
   .project-content p {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    text-align: center;
   }
 
-  .project-image {
-    height: 220px;
+  .project-tags {
+    justify-content: center;
+    gap: 0.6rem;
+  }
+
+  .project-tag {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
   }
 }
 
 @media (max-width: 480px) {
+  .project-section {
+    padding: 2rem 0.8rem;
+  }
+
+  #projectcard, #projectcardright {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
   .project-content h3 {
     font-size: 1.5rem;
   }
 
   .project-content p {
     font-size: 0.9rem;
+    line-height: 1.6;
   }
 
   .project-image {
     height: 180px;
   }
 
+  .project-tags {
+    gap: 0.5rem;
+  }
+
   .project-tag {
+    padding: 0.3rem 0.6rem;
     font-size: 0.8rem;
-    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 360px) {
+  .project-section {
+    padding: 1.5rem 0.6rem;
+  }
+
+  #projectcard, #projectcardright {
+    padding: 0.8rem;
+  }
+
+  .project-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-content p {
+    font-size: 0.85rem;
+  }
+
+  .project-image {
+    height: 160px;
+  }
+
+  .project-tag {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
   }
 }
 
